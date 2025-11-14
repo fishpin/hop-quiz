@@ -1,0 +1,202 @@
+/* styling tied to javascript functions*/
+
+.questionForms {
+    display: none;
+}
+.questionForms.active {
+    display: block;
+}
+
+#results {
+    display: none;
+}
+#results.active {
+    display: block;
+}
+
+
+/* Regular styling for webpage looks */
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+
+    background-color: #eef3f6;
+    color: #8f98a1;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin: 0 160px;
+}
+
+ul {
+
+    list-style-type: none;
+
+}
+
+/*text formatting*/
+h1 {
+    text-align: center;
+    margin: 32px auto 0;
+    color: #db7c26;
+    font-weight: 800;
+    text-shadow:
+     2px  2px 3px #c8d0d8,   
+    -2px -2px 3px #ffffff;   
+}
+
+h2 {
+    font-size: 24px;
+    max-width: 85%;
+    margin: 8px auto 0;
+}
+
+#intro p {
+    margin: 8px auto 32px;
+    max-width: 80ch;
+}
+
+#quiz p {
+    margin: 0px auto 8px;
+    max-width: 85%;
+}
+
+#q1Result, #q2Result, #q3Result, #q4Result, #q5Result {
+
+    color: #db7c26; 
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+#quizScore {
+    color: #db7c26;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}
+
+/*Quiz card + radio styling*/
+.questionForms{
+    border-radius: 40px;
+    box-shadow: 
+       inset 6px 6px 12px #c8d0d8, 
+        inset -6px -6px 12px #ffffff;
+    
+    width: 70%;
+    margin: 32px auto 16px;
+    padding: 16px 16px 8px;
+}
+
+.questionWrapper {
+    max-width: 80%;
+    margin: 40px auto;
+}
+
+/*Used box shadows, position and display for neumorphic effect*/
+.option {
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 10px;
+    border-radius: 12px;
+    transition: color .3s ease, transform .3s ease;
+
+    cursor: pointer;
+}
+.option:hover{
+  color: #e49d5c;
+}
+
+.option:has(> input[type="radio"]:checked){
+  color: #db7c26;
+}
+
+.option > input[type="radio"]
+{
+    appearance: none; 
+    box-sizing: border-box;
+    background: #eef3f6;
+
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%;
+    border: none; 
+    cursor: pointer;
+  
+    box-shadow: 
+        6px 6px 12px #c8d0d8, 
+        -6px -6px 12px #ffffff;
+
+    padding: 8px;                   
+    background-clip: content-box;   
+    transition: box-shadow .3s ease, background-size .2s ease; 
+}
+.option > input[type="radio"]:checked {
+
+    background-color: #db7c26;
+    box-shadow: 
+        inset 2px 2px 4px #c8d0d8, 
+        inset -2px -2px 4px #ffffff;
+}
+.option > input[type="radio"]:hover:not(:checked) {
+    transform: translateY(-1px);
+    box-shadow: 
+        6px 6px 12px #ffffff, 
+        -6px -6px 12px #c8d0d8;
+}
+
+
+/*button styling*/
+button {
+    background-color: #eef3f6;
+    color: #778089;
+    font-family: inherit;
+    font-size: inherit;
+
+    width: 40%;
+    padding: 16px 24px;
+    margin: 8px 8px 24px;
+
+    border: none;
+    border-radius: 16px;
+    box-shadow: 
+        6px 6px 12px #c8d0d8, 
+        -6px -6px 12px #ffffff;
+}
+button:enabled:hover {
+    color: #db7c26;
+    transform: translateY(-1px);
+    box-shadow: 
+        6px 6px 12px #ffffff, 
+        -6px -6px 12px #c8d0d8;
+}
+button:enabled:active {
+    background-color: #eef3f6;
+    box-shadow: 
+        inset 2px 2px 4px #c8d0d8, 
+        inset -2px -2px 4px #ffffff;
+}
+button:disabled {
+
+    cursor: not-allowed;
+
+    background-color: #e1e6ea;
+    box-shadow: 
+        inset 2px 2px 4px #c8d0d8, 
+        inset -2px -2px 4px #ffffff;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#reset {
+    width: 30%;
+    margin: 24px auto 40px;
+}

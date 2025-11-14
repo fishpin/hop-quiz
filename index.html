@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en" charset="utf-8">
+        <title>Quiz Assignment</title>
+        <script src="./java.js" defer></script>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Hop Quiz!</h1>
+        <div id="intro">
+        <p>There are a total of five multiple choice questions for you to answer. Simply select 
+            the one you think is correct and hit submit to see if you've answered the questions 
+            correctly or not. Once you've answered all of the questions, your final score will be
+            displayed. I hope you like bunnies!
+        </p>
+        </div>
+
+        <div id="quiz">
+            <form id="q1Form" class="questionForms">
+                <div class="questionWrapper">
+                <h2>Question 1</h2>
+                <p>Which breed of rabbit is known for its floppy ears?</p>
+                <ul>
+                    <li>
+                        <label class="option"><input type="radio" id="question1A" value="lop" name="q1Answer">
+                        Holland Lop</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question1B" value="lionhead" name="q1Answer">
+                        Lionhead</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question1C" value="dwarf" name="q1Answer">
+                        Netherland Dwarf</label>
+                    </li>
+                </ul>
+                <div class="buttons">
+                <button type="button" id="submitQ1" onclick="checkAnswer(1)">Submit</button>
+                <button type="button" id="goToQ2" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+                <p id="q1Result"></p>
+                </div>
+            </form>
+
+            <form id="q2Form" class="questionForms">
+                <div class="questionWrapper">
+                <h2>Question 2</h2>
+                <p>A rabbit thumping its hind legs usually means what?</p>
+                <ul>
+                    <li>
+                        <label class="option"><input type="radio" id="question2A" value="angry" name="q2Answer">
+                        It's angry</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question2B" value="danger" name="q2Answer">
+                        It senses danger</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question2C" value="excited" name="q2Answer">
+                        Its excited</label>
+                    </li>
+                </ul>
+                <div class="buttons">
+                <button type="button" id="submitQ2" onclick="checkAnswer(2)">Submit</button>
+                <button type="button" id="goToQ3" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+                <p id="q2Result"></p>
+                </div>
+            </form>
+
+            <form id="q3Form" class="questionForms">
+                <div class="questionWrapper">
+                <h2>Question 3</h2>
+                <p>What is a baby rabbit called?</p>
+                <ul>
+                    <li>
+                        <label class="option"><input type="radio" id="question3A" value="pup" name="q3Answer">
+                        A pup</label>
+                    </li>
+                    <li>
+                       <label class="option"><input type="radio" id="question3B" value="kit" name="q3Answer">
+                        A kit</label> 
+                    </li>
+                    <li>
+                       <label class="option"><input type="radio" id="question3C" value="bean" name="q3Answer">
+                        A bean</label> 
+                    </li>
+                </ul>
+                <div class="buttons">
+                <button type="button" id="submitQ3" onclick="checkAnswer(3)">Submit</button>
+                <button type="button" id="goToQ4" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+                <p id="q3Result"></p>
+                </div>
+            </form>
+
+            <form id="q4Form" class="questionForms">
+                <div class="questionWrapper">
+                <h2>Question 4</h2>
+                <p>What type of mammal is a rabbit?</p>
+                <ul>
+                    <li>
+                        <label class="option"><input type="radio" id="question4A" value="rodent" name="q4Answer">
+                        Rodent</label>
+                    </li>
+                    <li>
+                      <label class="option"><input type="radio" id="question4B" value="marsupial" name="q4Answer">
+                        Marsupial</label>  
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question4C" value="legomorph" name="q4Answer">
+                        Legomorph</label>
+                    </li>
+                </ul>
+                <div class="buttons">
+                <button type="button" id="submitQ4" onclick="checkAnswer(4)">Submit</button>
+                <button type="button" id="goToQ5" onclick="nextQuestion()" disabled>Next</button>
+                </div>
+                <p id="q4Result"></p>
+                </div>
+            </form>
+
+            <form id="q5Form" class="questionForms">
+                <div class="questionWrapper">
+                <h2>Question 5</h2>
+                <p>Which vegetable causes digestive discomfort if rabbits eat too much of it?</p>
+                <ul>
+                    <li>
+                        <label class="option"><input type="radio" id="question5A" value="broccoli" name="q5Answer">
+                        Broccoli</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question5B" value="pepper" name="q5Answer">
+                        Bell Pepper</label>
+                    </li>
+                    <li>
+                        <label class="option"><input type="radio" id="question5C" value="celery" name="q5Answer">
+                        Celery</label>
+                    </li>
+                </ul>
+                <div class="buttons">
+                <button type="button" id="submitQ5" onclick="checkAnswer(5)">Submit</button>
+                <button type="button" id="goToResult" onclick="nextQuestion()" disabled>Results</button>
+                </div>
+                <p id="q5Result"></p>
+
+                </div>
+            </form>
+        </div>
+
+        <div id="results">
+                <p id="quizScore"></p>
+        </div>
+        <button type="button" class="buttons" id="reset" onclick="startOver()">Start Over</button>
+
+    </body>
+</html>
+
+<!--
+The program should use functions to organize the code and make it easier to read and modify.
+The program should use control structures such as loops and conditional statements to ensure the quiz functions correctly. -->
