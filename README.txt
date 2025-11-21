@@ -20,7 +20,8 @@ Technologies Used:
 - CSS
 - JavaScript
 
-How to Use:
+How to Play:
+- Visit https://fishpin.github.io/hop-quiz/
 - Select an answer for the current question.
 - Click Submit to check your answer.
 - Use Next to move to the next question.
